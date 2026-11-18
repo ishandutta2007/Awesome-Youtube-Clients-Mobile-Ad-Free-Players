@@ -51,9 +51,9 @@ The global online video streaming and creator media market is valued at approxim
 
 ## 📱 Open-Source GitHub Projects
 
-Explore the top open-source YouTube frontends and mobile clients, arranged in descending order by community GitHub Stars.
+Explore the top open-source YouTube frontends and mobile clients, arranged in descending order by community GitHub_Stars.
 
-| Repository & Client 📱 | Stars ⭐ | Platform / Architecture 💻 | Description & Key Features 🛡️ |
+| Repository & Client 📱 | GitHub_Stars ⭐ | Platform / Architecture 💻 | Description & Key Features 🛡️ |
 | :--- | :---: | :--- | :--- |
 | **[NewPipe](https://github.com/TeamNewPipe/NewPipe)** | <a href="https://github.com/TeamNewPipe/NewPipe/stargazers"><img src="https://img.shields.io/github/stars/TeamNewPipe/NewPipe?style=social&color=white" alt="NewPipe Stars"/></a> | Android | Ultra-lightweight, privacy-first native Android YouTube frontend operating without Google Play Services; supports background audio, PiP popup, offline downloads, and zero user profiling. |
 | **[SmartTube](https://github.com/yuliskov/SmartTube)** | <a href="https://github.com/yuliskov/SmartTube/stargazers"><img src="https://img.shields.io/github/stars/yuliskov/SmartTube?style=social&color=white" alt="SmartTube Stars"/></a> | Android TV / Fire TV | Advanced open-source YouTube client engineered for TV displays and set-top boxes; features automatic SponsorBlock, 4K/8K 60fps HDR, VP9/AV1 codec tuning, and phone casting. |
@@ -86,7 +86,7 @@ Explore the top open-source YouTube frontends and mobile clients, arranged in de
 
 Behind third-party YouTube clients and ad-free players is an ecosystem of open-source video downloaders, parser libraries, and crowdsourced filtering networks:
 
-| Ecosystem Project 🛠️ | Stars ⭐ | Role & Description 🔍 |
+| Ecosystem Project 🛠️ | GitHub_Stars ⭐ | Role & Description 🔍 |
 | :--- | :---: | :--- |
 | **[yt-dlp](https://github.com/yt-dlp/yt-dlp)** | <a href="https://github.com/yt-dlp/yt-dlp/stargazers"><img src="https://img.shields.io/github/stars/yt-dlp/yt-dlp?style=social&color=white" alt="yt-dlp Stars"/></a> | Highly capable CLI video downloader and stream extractor supporting thousands of media sites; powers the playback core of dozens of desktop and mobile applications. |
 | **[PeerTube](https://github.com/Chocobozzz/PeerTube)** | <a href="https://github.com/Chocobozzz/PeerTube/stargazers"><img src="https://img.shields.io/github/stars/Chocobozzz/PeerTube?style=social&color=white" alt="PeerTube Stars"/></a> | Decentralized, federated ActivityPub video broadcasting and streaming platform; provides a peer-to-peer alternative to centralized platforms. |
