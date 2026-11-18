@@ -2,7 +2,7 @@
 
 # Awesome-Youtube-Clients-Mobile-Ad-Free-Players
 
-# Top YouTube Clients & Mobile Ad-Free Players Ecosystem
+## Top YouTube Clients & Mobile Ad-Free Players Ecosystem
 
 **Curated List of SaaS Products & Open-Source GitHub Projects**  
 *Focused on Ad-Free Video Streaming, Privacy-First Frontends & Alternative Media Players*  
