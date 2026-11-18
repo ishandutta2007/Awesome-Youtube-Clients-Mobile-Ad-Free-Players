@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360">
+  <defs>
+    <!-- Background linear gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="50%" stop-color="#141a29" />
+      <stop offset="100%" stop-color="#1e0c1f" />
+    </linearGradient>
+
+    <!-- Accent glows -->
+    <linearGradient id="redGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF0000" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#FF416C" stop-opacity="0.2" />
+    </linearGradient>
+
+    <linearGradient id="purpleGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8A2387" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#E94057" stop-opacity="0.2" />
+    </linearGradient>
+
+    <!-- Card Background Gradient -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02" />
+    </linearGradient>
+
+    <!-- Text Shimmer Gradient -->
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF4B4B" />
+      <stop offset="50%" stop-color="#FF8A00" />
+      <stop offset="100%" stop-color="#E52E71" />
+    </linearGradient>
+
+    <filter id="blurFilter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="40" result="blur" />
+    </filter>
+
+    <filter id="glowEffect" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .dynamic-bubble {
+      animation: float 6s ease-in-out infinite alternate;
+    }
+    .dynamic-bubble-reverse {
+      animation: floatRev 7s ease-in-out infinite alternate;
+    }
+    .pulse-glow {
+      animation: pulse 4s ease-in-out infinite;
+    }
+    .stream-wave {
+      animation: waveMove 12s linear infinite;
+    }
+    .pill {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      fill: #ffffff;
+    }
+    .pill-card {
+      transition: all 0.3s ease;
+    }
+    @keyframes float {
+      0% { transform: translateY(0px) rotate(0deg); }
+      100% { transform: translateY(-16px) rotate(3deg); }
+    }
+    @keyframes floatRev {
+      0% { transform: translateY(0px) rotate(0deg); }
+      100% { transform: translateY(18px) rotate(-3deg); }
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 0.8; }
+    }
+    @keyframes waveMove {
+      0% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: -200; }
+    }
+  </style>
+
+  <!-- Background Base -->
+  <rect width="1200" height="360" rx="16" fill="url(#bgGrad)" />
+
+  <!-- Animated Ambient Nebula Glows -->
+  <circle cx="150" cy="80" r="130" fill="url(#redGlow)" filter="url(#blurFilter)" class="pulse-glow" />
+  <circle cx="1050" cy="280" r="150" fill="url(#purpleGlow)" filter="url(#blurFilter)" class="pulse-glow" />
+
+  <!-- Dynamic / Animated Background Wave Streams -->
+  <path d="M-50,280 Q 250,210 550,290 T 1150,250 T 1300,280" fill="none" stroke="#FF0000" stroke-opacity="0.25" stroke-width="2.5" stroke-dasharray="12,12" class="stream-wave" />
+  <path d="M-50,310 Q 300,240 650,330 T 1200,290" fill="none" stroke="#E52E71" stroke-opacity="0.2" stroke-width="1.8" stroke-dasharray="8,8" class="stream-wave" style="animation-duration: 9s;" />
+
+  <!-- Dynamic Floating Decorative Badge / Card: Left Side -->
+  <g class="dynamic-bubble" transform="translate(70, 75)">
+    <rect width="165" height="42" rx="21" fill="url(#cardGrad)" stroke="#ff4444" stroke-opacity="0.35" stroke-width="1.2" />
+    <circle cx="24" cy="21" r="8" fill="#FF0000" />
+    <polygon points="21,17 29,21 21,25" fill="#ffffff" />
+    <text x="40" y="26" class="pill">Ad-Free Stream</text>
+  </g>
+
+  <g class="dynamic-bubble-reverse" transform="translate(90, 230)">
+    <rect width="170" height="42" rx="21" fill="url(#cardGrad)" stroke="#ff77aa" stroke-opacity="0.35" stroke-width="1.2" />
+    <circle cx="24" cy="21" r="8" fill="#E52E71" />
+    <text x="19" y="25" fill="#fff" font-size="11">🛡️</text>
+    <text x="40" y="26" class="pill">Zero Tracking</text>
+  </g>
+
+  <!-- Dynamic Floating Decorative Badge / Card: Right Side -->
+  <g class="dynamic-bubble" transform="translate(950, 75)">
+    <rect width="175" height="42" rx="21" fill="url(#cardGrad)" stroke="#00C9FF" stroke-opacity="0.35" stroke-width="1.2" />
+    <circle cx="24" cy="21" r="8" fill="#00C9FF" />
+    <text x="18" y="25" fill="#fff" font-size="11">⚡</text>
+    <text x="40" y="26" class="pill">SponsorBlock API</text>
+  </g>
+
+  <g class="dynamic-bubble-reverse" transform="translate(940, 230)">
+    <rect width="180" height="42" rx="21" fill="url(#cardGrad)" stroke="#92FE9D" stroke-opacity="0.35" stroke-width="1.2" />
+    <circle cx="24" cy="21" r="8" fill="#00E676" />
+    <text x="18" y="25" fill="#fff" font-size="11">📱</text>
+    <text x="40" y="26" class="pill">Background Audio</text>
+  </g>
+
+  <!-- Foreground Main Content (Center) -->
+  <g transform="translate(600, 115)" text-anchor="middle">
+    <!-- Play Icon Logo with Glow -->
+    <g transform="translate(0, -25)">
+      <rect x="-35" y="-22" width="70" height="44" rx="14" fill="#FF0000" filter="url(#glowEffect)" />
+      <polygon points="-8,-12 14,0 -8,12" fill="#FFFFFF" />
+    </g>
+
+    <!-- Main Title -->
+    <text y="58" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="34" font-weight="900" fill="#FFFFFF" letter-spacing="-0.5">
+      Awesome YouTube Clients &amp; Ad-Free Players
+    </text>
+
+    <!-- Subtitle (Gradient Accent) -->
+    <text y="92" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="700" fill="url(#textGrad)" letter-spacing="0.2">
+      TOP MOBILE &amp; DESKTOP STREAMING CLIENTS • PRIVACY FRONTENDS • OPEN-SOURCE MEDIA
+    </text>
+
+    <!-- Short Tagline -->
+    <text y="124" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="400" fill="#94A3B8" letter-spacing="0.1">
+      Curated ecosystem of Android, iOS, Android TV, Desktop &amp; Self-Hosted Players with SponsorBlock &amp; PiP
+    </text>
+  </g>
+
+  <!-- Outer Border -->
+  <rect x="1" y="1" width="1198" height="358" rx="15" fill="none" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1.5" />
+</svg>
